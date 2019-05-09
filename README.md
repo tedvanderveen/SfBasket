@@ -7,8 +7,17 @@ to allow baskets to timeout, or to persist data in a permanent store on deactiva
 To build and deploy this application you will need a few tools. Here is a list of software that can be used:
 
 ### Visual Studio Code or Community Edition
+
 * [Visual Studio](https://visualstudio.microsoft.com)
 * [Visual Studio Code](https://code.visualstudio.com)
 
 ### Service Fabric SDK
+
 * [Service Fabric SDK](https://www.microsoft.com/web/handlers/webpi.ashx?command=getinstallerredirect&appid=MicrosoftAzure-ServiceFabric-CoreSDK)
+
+## Start SF and debug
+
+* make sure that the Basket project is set as the startup project
+* set platform to x64
+* hit F5
+* open browser and navigate to http://localhost:8118/swagger/index.html
