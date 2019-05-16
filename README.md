@@ -20,4 +20,4 @@ To build and deploy this application you will need a few tools. Here is a list o
 * make sure that the Basket project is set as the startup project
 * set platform to x64
 * hit F5
-* open browser and navigate to http://localhost:8118/swagger/index.html
+* open browser and navigate to http://localhost:8081/swagger/index.html
