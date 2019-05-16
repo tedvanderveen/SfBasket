@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BasketActor.Interfaces\BasketActor.Interfaces.csproj" />
+    <ProjectReference Include="..\Basket.Abstractions\Basket.Abstractions.csproj" />
   </ItemGroup>
   
 </Project>

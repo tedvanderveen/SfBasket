@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Basket.Abstractions;
+using Basket.Abstractions.Baskets;
 using Microsoft.ServiceFabric.Actors;
 using Microsoft.ServiceFabric.Actors.Runtime;
-using BasketActor.Interfaces;
 using Microsoft.ServiceFabric.Data;
 
 namespace BasketActor
@@ -52,10 +53,10 @@ namespace BasketActor
             }
 
             await StateManager.SetStateAsync(StateName, state.Value, cancellationToken);
-            await StateManager.SaveStateAsync();
+            await StateManager.SaveStateAsync(cancellationToken);
         }
 
-        public async Task RemoveProductFromBasket(Guid productId, CancellationToken cancellationToken)
+        public async Task RemoveProductFromBasket(int productId, CancellationToken cancellationToken)
         {
             var state = await StateManager.TryGetStateAsync<List<Product>>(StateName, cancellationToken);
             if (state.HasValue)
