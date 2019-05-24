@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "b73408e2-3aac-43f8-bdf6-d590b2ec86ba",
+		"name": "Basket",
+		"description": "Basket API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain, application/json, text/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{SfBasket}}/api/Basket/:id",
+							"host": [
+								"{{SfBasket}}"
+							],
+							"path": [
+								"api",
+								"Basket",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{SfBasket}}/api/Basket/:id",
+							"host": [
+								"{{SfBasket}}"
+							],
+							"path": [
+								"api",
+								"Basket",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\tid: 23,\n\tname: \"schoenen\",\n\tprice: 45\n}"
+						},
+						"url": {
+							"raw": "{{SfBasket}}/api/Basket/:id/items",
+							"host": [
+								"{{SfBasket}}"
+							],
+							"path": [
+								"api",
+								"Basket",
+								":id",
+								"items"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{SfBasket}}/api/Basket/:id/items/:productId",
+							"host": [
+								"{{SfBasket}}"
+							],
+							"path": [
+								"api",
+								"Basket",
+								":id",
+								"items",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "productId",
+									"value": "23"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain, application/json, text/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{SfBasket}}/api/Order/:id",
+							"host": [
+								"{{SfBasket}}"
+							],
+							"path": [
+								"api",
+								"Order",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain, application/json, text/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///api/Order/:id/orderState",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"api",
+								"Order",
+								":id",
+								"orderState"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain, application/json, text/json"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "1"
+						},
+						"url": {
+							"raw": "{{SfBasket}}/api/Order",
+							"host": [
+								"{{SfBasket}}"
+							],
+							"path": [
+								"api",
+								"Order"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for api"
+		}
+	]
+}
